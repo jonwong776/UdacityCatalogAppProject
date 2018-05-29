@@ -31,6 +31,9 @@ The Udacity Catalog App Project for the Full Stack Web Developer Nanodegree. Thi
             - HTML file containing the list of items within a category.
 6. static (Folder)
     - Folder containing the CSS file for all the HTML files in the templates folder.
+    - Contains the files:
+        - main.css
+            - CSS file that provides the styling for the HTML files in the templates folder.
 
 ## Prerequisites/Installation
 
