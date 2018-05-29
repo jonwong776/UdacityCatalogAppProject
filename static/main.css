@@ -1,0 +1,84 @@
+/* General */
+* {
+      box-sizing: border-box;
+      font-family: 'Raleway', sans-serif;
+}
+
+body
+{
+    background-color: lightgray;
+}
+
+h1, h2, h3
+{
+    color: #091E3E;
+}
+
+span
+{
+    color: gray;
+    font-style: italic;
+}
+
+a
+{
+    color: #D1593A;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Header Banner */
+.header
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #091E3E;
+    padding: 0 10%;
+    height: 65px;
+}
+
+/* Header Text */
+.header h1
+{
+    color: white;
+}
+
+ /* Signin Button */
+.login, .logout
+{
+    background-color: #D1593A;
+    color: white;
+    font-size: 16px;
+    width: 100px;
+    height: 40px;
+}
+
+/* Container for main content below banner */
+.main-container
+{
+    display: flex;
+    justify-content: flex-start;
+    margin: 20px 10%;
+    padding: 0 10px 20px 10px;
+    background-color: white;
+}
+
+/* Categories Section */
+.categories
+{
+    padding-right: 20px;
+}
+
+/* Vertical Line */
+.vl
+{
+    border-right: 1px solid gray;
+    margin: 20px 0;
+}
+
+/* Items Section */
+.items
+{
+    padding-left: 20px;
+}

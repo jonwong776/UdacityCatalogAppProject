@@ -1,0 +1,27 @@
+{% extends "main.html" %}
+{% block content %}
+
+<div class="add-item">
+    <h2>Add Item</h2>
+    <!-- Form to add a new item -->
+    <form action="{{ url_for('add_item')}}" method = "post">
+        <div class="form-group">
+            <label for="title">Title</label><br>
+            <input type ="text" class="form-control" name="title">
+            <br><br>
+            <label for="description">Description</label><br>
+            <input type ="text" class="form-control" name="description">
+            <br><br>
+            <label for="category">Category</label><br>
+            <select name="category">
+                {% for category in categories %}
+                <option value={{category.name}}>{{category.name}}</option>
+                {% endfor %}
+            </select>
+            <br><br>
+            <input type="submit" value="Submit">
+        </div>
+    </form>
+</div>
+
+{% endblock %}

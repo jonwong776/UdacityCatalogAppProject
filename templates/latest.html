@@ -1,0 +1,35 @@
+{% extends "main.html" %}
+{% block content %}
+
+<!-- Left-hand side of main area for categories -->
+<div class="categories">
+    <h2>Categories</h2>
+        <a href = "{{url_for('load_items', category = 'Soccer')}}">Soccer</a><br><br>
+        <a href = "{{url_for('load_items', category = 'Basketball')}}">Basketball</a><br><br>
+        <a href = "{{url_for('load_items', category = 'Baseball')}}">Baseball</a><br><br>
+        <a href = "{{url_for('load_items', category = 'Frisbee')}}">Frisbee</a><br><br>
+        <a href = "{{url_for('load_items', category = 'Snowboarding')}}">Snowboarding</a><br><br>
+        <a href = "{{url_for('load_items', category = 'Rock Climbing')}}">Rock Climbing</a><br><br>
+        <a href = "{{url_for('load_items', category = 'Foosball')}}">Foosball</a><br><br>
+        <a href = "{{url_for('load_items', category = 'Skating')}}">Skating</a><br><br>
+        <a href = "{{url_for('load_items', category = 'Hockey')}}">Hockey</a><br><br>
+</div>
+
+<!-- Vertical line divider -->
+<div class="vl"></div>
+
+<!-- Right-hand side of main area for items -->
+<div class="items">
+    <!-- Dynamic button to add items that appears when logged in -->
+    {% if name %}
+    <br><a href = "{{url_for('add_item')}}">Add Item</a>
+    {% endif %}
+    
+    <!-- Area listing top 10 more recently added items in catalog -->
+    <h2>Latest Items</h2>
+    {% for item in items %}
+        <a href = "{{url_for('view_item', category = item.name, item = item.title)}}">{{item.title}}</a> <span>({{item.name}})</span><br><br>
+    {% endfor %}
+</div>
+
+{% endblock %}
